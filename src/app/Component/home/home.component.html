@@ -1,0 +1,268 @@
+<div class="container mt-5">
+  <div class="row justify-content-center text-center g-5" style="margin-top: 1.7rem">
+    <div class="col-12 col-md-3 mb-1">
+      <button type="button" class="btn btn-primary w-100">Explore Menu</button>
+    </div>
+    <div class="col-12 col-md-3">
+      <button type="button" class="btn btn-warning w-100">Contact Us</button>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row align-items-center" style="min-height: 300px;">
+    <!-- Text Section -->
+    <div class="col-md-5 d-flex flex-column justify-content-center">
+      <h2 style="font-weight: bold;"><b>Nadan Bites — South Indian Street Food</b></h2>
+      <p style="margin-top: 1.7rem">
+        Nadan Bites brings the soulful flavours of home to students and busy professionals
+        across the UK. Think crispy dosas, pillowy idlis, crunchy vadas and comforting curries —
+        affordable, authentic, and made fresh.
+      </p>
+    </div>
+
+    <!-- Image Section -->
+    <div class="col-md-7 text-center">
+      <img src="assets/image/pre-prepared-food-showcasing-ready-eat-delicious-meals-go.jpg" alt="Dosa"
+        class="img-fluid rounded shadow" style="max-height: 70vh; object-fit: cover; width: 88%;">
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5" id="menu">
+  <div class="row">
+    <div class="col-12">
+      <h2 style="font-weight: bold;">Menu</h2>
+      <p style="margin-top: 1.7rem">Handmade, small-batch favourites inspired by Kerala, Tamil Nadu and coastal South
+        India.</p>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top: 1.7rem">
+    <!-- First 3 items (always visible) -->
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card border-0 h-100" style="box-shadow: rgba(99,99,99,0.2) 0px 2px 8px 0px;">
+        <img src="../../../assets/image/Masala Dosa.jpg" class="card-img-top" alt="Masala Dosa">
+        <div class="card-body d-flex justify-content-between align-items-center">
+          <h6 class="mb-0">Masala Dosa</h6>
+          <h6 class="mb-0">£6.50</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card border-0 h-100" style="box-shadow: rgba(99,99,99,0.2) 0px 2px 8px 0px;">
+        <img src="../../../assets/image/idli.jpg" class="card-img-top" alt="Idli">
+        <div class="card-body d-flex justify-content-between align-items-center">
+          <h6 class="mb-0">Idli</h6>
+          <h6 class="mb-0">£4.00</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card border-0 h-100" style="box-shadow: rgba(99,99,99,0.2) 0px 2px 8px 0px;">
+        <img src="https://t4.ftcdn.net/jpg/05/95/75/03/360_F_595750340_HeIQ3LhWy7WPbE1ikn9pvJcc8uGq0Qri.jpg"
+          class="card-img-top" alt="Kerala Parotta + Curry">
+        <div class="card-body d-flex justify-content-between align-items-center">
+          <h6 class="mb-0">Kerala Parotta + Curry</h6>
+          <h6 class="mb-0">£3.50</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hidden items (only show when showFullMenu = true) -->
+    <ng-container *ngIf="showFullMenu">
+      <div class="col-12 col-md-4 mb-4">
+        <div class="card border-0 h-100" style="box-shadow: rgba(99,99,99,0.2) 0px 2px 8px 0px;">
+          <img src="../../../assets/image/Malabar biryani.jpg" class="card-img-top" alt="Vada">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <h6 class="mb-0">Malabar biryani</h6>
+            <h6 class="mb-0">£8.00</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 mb-4">
+        <div class="card border-0 h-100" style="box-shadow: rgba(99,99,99,0.2) 0px 2px 8px 0px;">
+          <img src="../../../assets/image/Appam.jpg" class="card-img-top" alt="Upma">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <h6 class="mb-0">Appam</h6>
+            <h6 class="mb-0">£4.00</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 mb-4">
+        <div class="card border-0 h-100" style="box-shadow: rgba(99,99,99,0.2) 0px 2px 8px 0px;">
+          <img src="../../../assets/image/Puri.jpg" class="card-img-top" alt="Upma">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <h6 class="mb-0">Puri</h6>
+            <h6 class="mb-0">£5.00</h6>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- Toggle button -->
+  <h6 class="text-center">
+    <a href="javascript:void(0)" (click)="showFullMenu = !showFullMenu">
+      {{ showFullMenu ? 'Show Less ↑' : 'View Full Menu →' }}
+    </a>
+  </h6>
+
+  <div class="card mt-5 border-0" style="box-shadow: rgba(99,99,99,0.2) 0px 2px 8px 0px;" id="about">
+    <div class="card-body">
+      <div class="container my-5">
+        <!-- Title & description -->
+        <div class="row mb-4">
+          <div class="col">
+            <h3 class="fw-bold">About Nadan Bites</h3>
+            <p>
+              Nadan Bites is a family-inspired food truck bringing authentic South Indian flavours to the streets.
+              We focus on seasonal ingredients, traditional techniques, and fast, friendly service.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3 feature columns -->
+        <div class="row">
+          <div class="col-12 col-md-4 mb-4">
+            <h6 class="fw-bold">Fresh Ingredients</h6>
+            <p class="mb-0">
+              Locally sourced produce and house-made batters & chutneys.
+            </p>
+          </div>
+
+          <div class="col-12 col-md-4 mb-4">
+            <h6 class="fw-bold">Family Recipes</h6>
+            <p class="mb-0">
+              Generations-old recipes adapted for the street food format.
+            </p>
+          </div>
+
+          <div class="col-12 col-md-4 mb-4">
+            <h6 class="fw-bold">Sustainability</h6>
+            <p class="mb-0">
+              Compostable packaging and reduced food waste practices.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12 col-md-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <h2 style="font-weight: bold;">Book Nadan Bites</h2>
+                <p>Hire our food truck for private events, markets, and festivals.</p>
+                <form>
+                  <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Name">
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                      placeholder="Email">
+                  </div>
+                  <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Phone">
+                  </div>
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Tell us about your event</label>
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-warning">Send Booking Request</button>
+                  </div>
+                  <div class="mt-5">
+                    <p>
+                      Phone: +44 7700 900000 <br>
+                      Email: <a href="mailto:nadanbites&#64;gmail.com">nadanbites&#64;gmail.com</a>
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 mb-4" id="locations">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <h2 style="font-weight: bold;">Find Us</h2>
+                <p>Follow us on socials for the live truck schedule</p>
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80497.11814323849!2d-1.4004929000000002!3d50.9138207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48738957be152909%3A0xa78c5a6a4cda71f0!2sSouthampton%2C%20UK!5e0!3m2!1sen!2sin!4v1758219106948!5m2!1sen!2sin"
+                    width="600" height="269" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="mt-3">
+                  <button type="button" class="btn btn-outline-primary" disabled>Instagram</button>&nbsp;
+                  <button type="button" class="btn btn-outline-primary" disabled>Facebook</button>&nbsp;
+                  <button type="button" class="btn btn-outline-primary" disabled>X</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4" id="Order">
+    <div class="row">
+      <div class="col">
+        <div class="card border-0 text-white"
+          style="background: linear-gradient(90deg, #d35400, #e67e22); border-radius: 10px;">
+          <div class="card-body d-flex justify-content-between align-items-center flex-wrap">
+
+            <!-- Left side -->
+            <div>
+              <h5 class="mb-1 fw-bold">Order for pickup</h5>
+              <p class="mb-0">Quick pickup orders — ready within 15-20 mins.</p>
+            </div>
+
+            <!-- Right side buttons -->
+            <div class="mt-3 mt-md-0">
+              <button class="btn btn-light me-2">Order Online</button>
+              <button class="btn btn-outline-light">Call to Order</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <footer class="py-3 border-top mt-5">
+    <div class="container">
+      <div class="row text-center text-md-start">
+
+        <!-- Left side -->
+        <div class="col-12 col-md-6 mb-2 mb-md-0">
+          <small>© 2025 <strong>Nadan Bites</strong> — All rights reserved.</small>
+        </div>
+
+        <!-- Right side -->
+        <div class="col-12 col-md-6 text-center text-md-end">
+          <small>Designed for a food truck — made with <span style="color:red;">❤️</span></small>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <br>
