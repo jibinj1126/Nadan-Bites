@@ -36,9 +36,7 @@
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": [
-                "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ],
+            "scripts": [],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
@@ -101,11 +99,9 @@
             ],
             "styles": [
               "src/styles.scss",
-                "node_modules/bootstrap/dist/css/bootstrap.min.css"
+                  "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": [
-                "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ]
+            "scripts": []
           }
         }
       }
